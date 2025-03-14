@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import "../styles/css/navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, isDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -13,12 +13,12 @@ const Navbar = () => {
         ☰
       </button>
       <h2 className="logo">
-        <a href="#"> My portofolio</a>
+        <Link to="/">My portofolio</Link>
       </h2>
 
       <ul className={`nav-links${menuOpen && isMobile ? "open" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/projects" onClick={() => setMenuOpen(!menuOpen)}>
             Projects
           </Link>
         </li>
@@ -28,6 +28,9 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <button onClick={toggleDarkMode} className="dark-mode-toggle">
+        {isDarkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </nav>
   );
 };
