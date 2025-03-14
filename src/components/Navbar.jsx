@@ -29,7 +29,16 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
         </li>
       </ul>
       <button onClick={toggleDarkMode} className="dark-mode-toggle">
-        {isDarkMode ? "Light Mode" : "Dark Mode"}
+        <img
+          src={
+            isDarkMode
+              ? "/assets/icons/light-mode.svg"
+              : "/assets/icons/dark-mode.svg"
+          }
+          alt="icon"
+          width="20rem"
+          height="auto"
+        />
       </button>
     </nav>
   );

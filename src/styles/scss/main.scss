@@ -32,6 +32,19 @@ body {
   color: white;
 }
 
+.dark-mode-toggle {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: lightgrey;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;

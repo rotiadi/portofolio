@@ -17,8 +17,6 @@ function App() {
   }, []);
 
   const toggleDarkMode = () => {
-    console.log(isDarkMode);
-
     setIsDarkMode(!isDarkMode);
   };
 
