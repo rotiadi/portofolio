@@ -7,7 +7,15 @@ const ContactItem = ({ icon, name, value }) => {
         <img src={icon} alt="icon" width="20rem" height="auto" />
         <p>{name}</p>
       </div>
-      <p>{value}</p>
+      <div className="contact-item-value">
+        {value.isLink ? (
+          <a href={value.value} target="_blank">
+            {value.value}
+          </a>
+        ) : (
+          <>{value.value}</>
+        )}
+      </div>
     </div>
   );
 };

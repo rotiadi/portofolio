@@ -21,7 +21,7 @@ const Projects = () => {
           <ProjectCard
             title="To Do App"
             link="https://delicate-kitten-287616.netlify.app/"
-            image="/public/assets/images/todo.jpeg"
+            image="/assets/images/todo.jpeg"
             description="A simple to do app built with DOM manipulation. 
           It allows users to add, edit, and delete tasks. 
           The app also has a filter feature that allows users to filter tasks by their status."
@@ -46,7 +46,7 @@ const Projects = () => {
           <ProjectCard
             title="Tapi"
             // link=""
-            image="/public/assets/images/pencil.svg"
+            image="/assets/images/pencil.svg"
             description="An application that allows users to learn 
           a new language by translating words or expressions.
            Is made like a game and the user needs to fill the spaces from the sentences provided by the application"
