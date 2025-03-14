@@ -1,0 +1,52 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+   
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.contact-item {
+    display: flex;
+    gap: 2rem;
+    animation: fadeScale 1.5s ease-in-out ;
+
+    .contact-item-info {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+
+@keyframes fadeScale {
+    0% {
+      opacity: 0.5;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
+
+@media (max-width: 768px) {
+  .contact-item {
+  
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;    
+      animation: fadeScale 1.5s ease-in-out ;
+  
+      
+      
+  }
+}

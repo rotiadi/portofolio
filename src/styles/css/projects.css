@@ -1,0 +1,35 @@
+.projects {
+  padding-bottom: 20px;
+}
+.projects h2 {
+  margin-left: 2rem;
+  text-align: center;
+  font-style: oblique;
+}
+.projects #solo {
+  animation: moveLeftToRight 1.5s ease-in;
+}
+.projects #group {
+  animation: moveRightToLeft 1.5s ease-in;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=projects.css.map */
