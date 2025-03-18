@@ -1,48 +1,39 @@
-:root {
-  --primary-color: #222;
-  --secondary-color: #13bbee;
-  --background-primary-color: #f4f4f4;
-  --background-secondary-color: #000;
+:root[data-theme=dark] {
+  color-scheme: dark;
+  --background-color: #565656;
+  --primary-color: #e0e0e0;
+  --secondary-color: #b0b0b0;
+  --border-color: lightgray;
+  --card-bg: #9b9b9b;
+  --tag-background-color: rgba(107, 126, 222, 0.708);
+  --input-background-color: #99989850;
+}
+
+:root[data-theme=light] {
+  color-scheme: light;
+  --background-color: #f0f0f0;
+  --primary-color: #010101;
+  --secondary-color: #888888;
+  --border-color: #444444;
+  --dividers-color: #444444;
+  --accent: #888888;
+  --tag-background-color: lightblue;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--vbackground-primary-color);
+p {
   color: var(--primary-color);
 }
 
-.app {
-  transition: all 0.3s ease;
-}
-
-.app.light {
-  background-color: white;
-  color: black;
-}
-
-.app.dark {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode-toggle {
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-  background-color: lightgrey;
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

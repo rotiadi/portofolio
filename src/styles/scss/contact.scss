@@ -18,7 +18,7 @@
   gap: 2rem;
   animation: fadeScale 1.5s ease-in-out;
   border-radius: 2rem;
-  background-color: beige;
+  background-color: var(--background-color);
   padding: 1rem;
 
   .contact-item-info {
@@ -26,10 +26,15 @@
     gap: 2rem;
   }
 }
+
+.contact-item * {
+  background-color: var(--background-color);
+}
+
 .contact-item-value {
   a {
     text-decoration: none;
-    color: var(--primary-color);
+    background-color: var(--background-color);
     display: inline-block;
   }
   :hover {
@@ -51,7 +56,7 @@
   width: 100%;
   align-items: center;
   gap: 1rem;
-  background-color: beige;
+  background-color: var(--background-color);
   border-radius: 3rem;
   padding: 2rem;
   animation: fadeScale 1.5s ease-in-out;
@@ -77,6 +82,7 @@ form {
       height: 1.5rem;
       padding: 0.4rem;
       box-shadow: 1rem 0.5rem 0.5rem 0.1rem lightblue;
+      background-color: var(--input-background-color);
     }
 
     textarea {
@@ -86,6 +92,7 @@ form {
       padding: 0.4rem;
       box-shadow: 1rem 0.5rem 0.5rem 0.1rem lightblue;
       line-height: 1.25rem;
+      background-color: var(--input-background-color);
     }
   }
 

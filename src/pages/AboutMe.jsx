@@ -16,10 +16,10 @@ const AboutMe = () => {
       <section className="section professional-life">
         <h2>Professional Life</h2>
         <p>
-          I specialize in backend development using Python and Django but also
-          work with JavaScript, Express, and MongoDB/PostgreSQL for API
-          development. My goal is to build scalable and efficient web
-          applications while constantly learning and improving my skills.
+          I specialize in backend development using JavaScript, Express, and
+          MongoDB/PostgreSQL for API development. My goal is to build scalable
+          and efficient web applications while constantly learning and improving
+          my skills.
         </p>
       </section>
 

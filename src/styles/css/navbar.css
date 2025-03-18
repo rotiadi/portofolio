@@ -1,44 +1,58 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  height: 4rem;
   align-items: center;
-  padding: 2rem 3rem;
-  background-color: var(--background-primary-color);
-  color: var(--primary-color);
+  margin: 0 10%;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  margin: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+}
+.navbar-container > * {
+  background-color: var(--background-color);
 }
 
 .logo {
   font-size: 2rem;
   font-weight: 700;
-  background-color: var(--background-primary-color);
 }
 
-.nav-links {
+.nav-linksopen {
   list-style: none;
   display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
+  height: 3rem;
+  align-items: center;
 }
-.nav-links li {
+.nav-linksopen li {
   margin: 0 2rem;
 }
-.nav-links li :hover {
+.nav-linksopen li :hover {
   border-bottom: 2px solid var(--primary-color);
   color: var(--secondary-color);
   transform: scale(1.5);
   transition: all 0.5s ease-in-out;
 }
-.nav-links a {
+.nav-linksopen a {
   display: inline-block;
-  text-decoration: none;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.nav-linksopen img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .logo a {
   display: inline-block;
-  text-decoration: none;
-  color: var(--primary-color);
 }
 .logo :hover {
-  color: var(--secondary-color);
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
 }
@@ -47,39 +61,40 @@
   display: none;
 }
 
+.dark-mode-toggle {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: var(--background-color) 0.3s ease;
+  justify-self: flex-end;
+}
+
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
     font-size: 1.5rem;
     background: none;
     border: none;
-    color: var(--primary-color);
     cursor: pointer;
     position: relative;
   }
   .nav-links {
-    display: none;
+    z-index: -1;
     flex-direction: column;
   }
   .nav-linksopen {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
-    width: 25%;
-    position: absolute;
-    top: 15%;
-    left: 0;
-    background-color: var(--background-primary-color);
+    justify-content: space-around;
     transition: all 0.5s;
   }
   .nav-linksopen li {
-    margin: 1rem 0;
     text-align: center;
     list-style: none;
     display: flex;
-  }
-  .nav-linksopen li a {
-    text-decoration: none;
-    color: var(--primary-color);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
   }
 }/*# sourceMappingURL=navbar.css.map */

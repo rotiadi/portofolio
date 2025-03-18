@@ -8,22 +8,25 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
 
   useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode === "true") {
-      setIsDarkMode(true);
-    }
-  }, []);
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    // setIsDarkMode(!isDarkMode);
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
-    <div className={`app ${isDarkMode ? "dark" : "light"}`}>
+    <div>
       <BrowserRouter>
-        <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+        <Navbar toggleDarkMode={toggleDarkMode} theme={theme} />
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
